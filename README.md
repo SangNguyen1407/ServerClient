@@ -7,7 +7,7 @@ Description
 2- Server send string which the client sents automatically.
 3- Server can control client by command line, source code can expand many functions such as login, exit, send file, etc.
 for example: when client sends (/exit) to close connect server.
-4- In server, there is a linked list to consist of users. The linked list can add (if client login server)/remove (if client remove server).   
+4- In server, there is a linked list to consist of users. The linked list can add (if client login server)/remove (if client remove server).
 
 How to connect server and client
 Start server
