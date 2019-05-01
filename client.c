@@ -8,16 +8,13 @@
 #include <pthread.h>    /* POSIX Threads */
 
 #define PORT			12345
-#define PORTSENDRECV	12346
 #define MAXMSGLEN		1024
-#define LISTEN_BACKLOG 	50
 #define handle_error(msg)\
 			do{perror(msg); exit(EXIT_FAILURE); }while(0)
 			
 /* client.c
  */	
-int sockClient, sockSendRecv;
-void *createThreadSendRevcFile(char *);
+int sockClient;
 
 
 struct ThreadClientInfo {
@@ -78,7 +75,7 @@ int main (int argc, char * argv[])
 	char srvIpAddr[20];
 	struct in_addr addr;
 	struct ThreadClientInfo *threadClient;
-	struct ThreadClientInfo *threadSendRecvFile;
+	
 	sockClient = socket(AF_INET, SOCK_STREAM, 0);
 	if (sockClient == -1)
 		handle_error("sock");
