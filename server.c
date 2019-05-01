@@ -148,7 +148,6 @@ char **listUsrOnline(struct ListClientThread *ll)
 	return listUserOnline;
 }
 
-
 int codeOnMessage(char *clientMessage, char *contentMsg)
 {
 	char climsg[MAXMSGLEN];
@@ -271,9 +270,6 @@ void *clientHandler(struct ThreadClientInfo *threadClientInfo)
 	    }
     }
 }
- 
- 
- 
 
 int main (int argc, char *argv[])
 {
